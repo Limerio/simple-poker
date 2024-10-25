@@ -4,6 +4,7 @@ import { useGameStore } from "@/stores/game";
 import { TYPE_OF_PLAYERS } from "@/utils/constants";
 import { Box, Button } from "@radix-ui/themes";
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Confetti, { ConfettiConfig } from "react-dom-confetti";
 
@@ -40,21 +41,37 @@ export const Route = createFileRoute("/play")({
           </IsAPlayerWin>
         </Box>
         {playerWinner ? (
-          <Button
-            className="bg-blue-500 inter-text"
-            onClick={resetGame}
-            size="4"
+          <motion.div
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.25 },
+            }}
+            whileTap={{ scale: 0.9 }}
           >
-            Reset the party
-          </Button>
+            <Button
+              className="bg-blue-500 inter-text"
+              onClick={resetGame}
+              size="4"
+            >
+              Reset the party
+            </Button>
+          </motion.div>
         ) : (
-          <Button
-            className="bg-[var(--red-card)] inter-text"
-            size="4"
-            onClick={whoWin}
+          <motion.div
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.25 },
+            }}
+            whileTap={{ scale: 0.9 }}
           >
-            Who win?
-          </Button>
+            <Button
+              className="bg-[var(--red-card)] inter-text"
+              size="4"
+              onClick={whoWin}
+            >
+              Who win?
+            </Button>
+          </motion.div>
         )}
         <Confetti active={playerWinner !== null} config={CONFETTI_CONFIG} />
       </div>
