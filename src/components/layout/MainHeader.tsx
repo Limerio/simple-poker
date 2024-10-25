@@ -2,7 +2,7 @@ import { Text } from "@radix-ui/themes";
 
 const WIDTH_AND_HEIGHT_POKER_ICON = 55;
 
-export const Header = () => {
+export const MainHeader = () => {
   return (
     <header className="p-5">
       <div className="flex items-center gap-2">
@@ -13,7 +13,7 @@ export const Header = () => {
           height={WIDTH_AND_HEIGHT_POKER_ICON}
         />
         <Text as="span" className="inter-title text-4xl text-white">
-          PokerGame
+          Simple Poker
         </Text>
       </div>
     </header>
