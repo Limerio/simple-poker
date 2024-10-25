@@ -6,6 +6,7 @@
 
 :root {
   --red-card: #dc3838;
+  --blue-card: #373051;
 }
 
 .main-background {
@@ -18,7 +19,7 @@
   background-image: linear-gradient(
     to right bottom,
     #1d2128,
-    #373051,
+    var(--blue-card),
     #942020,
     var(--red-card)
   );
