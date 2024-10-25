@@ -2,6 +2,7 @@ import "@/index.css";
 import { routeTree } from "@/routeTree.gen";
 import { Theme } from "@radix-ui/themes";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { MotionConfig } from "framer-motion";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 
@@ -18,9 +19,11 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <StrictMode>
-      <Theme>
-        <RouterProvider router={router} />
-      </Theme>
+      <MotionConfig reducedMotion="user">
+        <Theme>
+          <RouterProvider router={router} />
+        </Theme>
+      </MotionConfig>
     </StrictMode>
   );
 }
