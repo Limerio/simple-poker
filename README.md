@@ -8,7 +8,9 @@ I use the basic template for vite to create the project with the [bun](https://b
 
 - Bun
 - React
+- React-dom-confetti
 - Eslint
 - TailwindCSS
 - Typescript
 - Vitejs
+- Zustand
