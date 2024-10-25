@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --red-card: #dc3838;
+}
+
 .main-background {
   position: fixed;
   top: 0;
@@ -16,7 +20,7 @@
     #1d2128,
     #373051,
     #942020,
-    #dc3838
+    var(--red-card)
   );
 }
 
