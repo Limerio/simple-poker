@@ -12,7 +12,7 @@ export const MainHeader = () => {
           width={WIDTH_AND_HEIGHT_POKER_ICON}
           height={WIDTH_AND_HEIGHT_POKER_ICON}
         />
-        <Text as="span" className="inter-title text-4xl text-white">
+        <Text as="span" className="inter-title text-4xl text-white select-none">
           Simple Poker
         </Text>
       </div>
