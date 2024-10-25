@@ -1,5 +1,4 @@
-export type Suit = "♠" | "♥" | "♦" | "♣";
-export type Rank = "7" | "8" | "9" | "10" | "J" | "Q" | "K" | "A";
+import { Rank, Suit, TypeOfPlayer } from "@/utils/constants";
 
 export type PlayingCard = {
   suit: Suit;
@@ -8,7 +7,7 @@ export type PlayingCard = {
 };
 
 export type Player = {
-  id: number;
+  id: TypeOfPlayer;
   hand: PlayingCard[];
   chips: number;
   bet: number;
