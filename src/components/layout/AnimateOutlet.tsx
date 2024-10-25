@@ -29,13 +29,12 @@ export const AnimatedOutlet = forwardRef<HTMLDivElement>((_, ref) => {
   }
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <motion.div
         key={nextMatch.pathname}
         ref={ref}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <RouterContext.Provider value={renderedContext.current}>
