@@ -1,11 +1,20 @@
 import { Text } from "@radix-ui/themes";
+import { useNavigate } from "@tanstack/react-router";
 
 const WIDTH_AND_HEIGHT_POKER_ICON = 55;
 
 export const MainHeader = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    void navigate({
+      to: "/",
+    });
+  };
+
   return (
     <header className="p-5">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2" onClick={goBack}>
         <img
           src="/poker-game.svg"
           alt="Poker game icon"
